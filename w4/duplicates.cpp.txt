@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void duplicates(int arr[], int n){
+    for (int i = 0; i < n; i++) {
+        arr[arr[i] % n]
+            = arr[arr[i] % n] + n;
+    }
+    cout << "The repeating elements are : " << endl;
+    for (int i = 0; i < n; i++) {
+        if (arr[i] >= n * 2) {
+            cout << i << " " << endl;
+        }
+    }
+    return;
+    
+}
+
+int main()
+{
+    int arr[]={1,2,3,4,5,7,8,2,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    duplicates(arr,n);
+    return 0;
+}
